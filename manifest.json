@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "antiACDC",
+  "version": "1.0",
+
+  "description": "Dissable all the acdc site confloose.",
+
+  "icons": {
+      "48": "icons/48.png",
+      "96": "icons/96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://acdc.epita.fr/*"],
+        "js": ["main.js"],
+        "run_at": "document_end"
+    }
+  ]
+}
